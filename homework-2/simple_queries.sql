@@ -3,7 +3,8 @@
 SELECT CONTACT_NAME, COUNTRY FROM CUSTOMERS
 
 -- 2. идентификатор заказа и разницу между датами формирования (order_date) заказа и его отгрузкой (shipped_date) из таблицы orders
-
+SELECT order_id, order_date, shipped_date, shipped_date - order_date as difference_date
+FROM orders;
 
 -- 3. все города без повторов, в которых зарегистрированы заказчики (customers)
 SELECT count(distinct city) from customers
